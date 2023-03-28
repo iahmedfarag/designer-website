@@ -1,0 +1,92 @@
+.about {
+  overflow: hidden;
+  padding: 0;
+  .container {
+    padding: 100px 20px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    .aboutContent {
+      width: calc(100% / 2 - 10px);
+      z-index: 1;
+      .aboutHeader {
+        font-size: 50px;
+        font-weight: 700;
+      }
+      p {
+        margin: 25px 0;
+        font-size: 15px;
+        line-height: 2;
+        color: grey;
+      }
+      .aboutDownload {
+        padding: 15px 40px;
+        background-color: $blueLight;
+        color: white;
+        border: 1px solid $blueLight;
+        transition: 0.2s;
+        &:hover {
+          background-color: white;
+          color: $blueLight;
+        }
+      }
+    }
+    .aboutImg {
+      width: calc(100% / 2 - 10px);
+      z-index: 1;
+    }
+    .aboutBack {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .aboutTitle {
+        font-size: 235px;
+        font-weight: 800;
+        color: rgb(240, 240, 240);
+      }
+      .aboutGrid {
+        margin-right: -80px;
+        margin-top: -70px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .about {
+    .container {
+      .aboutBack {
+        .aboutGrid {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 0;
+    .container {
+      .aboutContent {
+        width: calc(100%);
+      }
+      .aboutImg {
+        width: calc(100%);
+      }
+      .aboutBack {
+        .aboutTitle {
+          font-size: 180px;
+          font-weight: 800;
+          color: rgb(240, 240, 240);
+        }
+      }
+    }
+  }
+}

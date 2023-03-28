@@ -1,0 +1,70 @@
+.services {
+  padding-top: 50px;
+  .container {
+    text-align: center;
+    .servicesLine {
+      height: 50px;
+      width: 2px;
+      background-color: #d465ef;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    .servicesTitleText {
+      font-size: 50px;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
+    .servicesWrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+      .serv {
+        border: 1px solid rgb(230, 230, 230);
+        transition: border 0.2s;
+        padding: 40px 30px;
+        width: calc(100% / 3 - 20px);
+
+        &:hover {
+          border: 1px solid #d465ef;
+        }
+
+        .servIcon {
+          margin-bottom: 15px;
+        }
+        .servTitle {
+          font-size: 20px;
+          font-weight: 700;
+          margin-bottom: 15px;
+        }
+        .servText {
+          line-height: 2;
+          color: gray;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .services {
+    .container {
+      .servicesWrapper {
+        .serv {
+          width: calc(100% / 2 - 15px);
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .services {
+    .container {
+      .servicesWrapper {
+        .serv {
+          width: calc(100%);
+        }
+      }
+    }
+  }
+}

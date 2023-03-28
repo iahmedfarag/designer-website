@@ -1,0 +1,60 @@
+.contact {
+  background-color: #001d38;
+  color: white;
+  padding: 50px 0;
+  .container {
+    @media (min-width: 1200px) {
+      max-width: 720px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      & > div {
+        width: 100%;
+        margin: 10px 0;
+        position: relative;
+        label {
+          display: block;
+          font-size: 13px;
+          position: absolute;
+          top: -17px;
+          left: 0;
+          // display: none;
+        }
+        input {
+          width: 100%;
+          padding: 10px;
+          border: none;
+          outline: none;
+          border: 1px solid grey;
+          &:focus {
+            border: 1px solid $blueLight;
+          }
+          &::placeholder {
+            font-size: 16px;
+          }
+          &:focus label {
+            display: block;
+          }
+        }
+        textarea {
+          width: 100%;
+          padding: 10px;
+          &::placeholder {
+            font-size: 16px;
+          }
+          border: none;
+          outline: none;
+          border: 1px solid grey;
+          &:focus {
+            border: 1px solid blue;
+          }
+        }
+      }
+      button {
+        width: fit-content;
+        padding: 10px 30px;
+      }
+    }
+  }
+}

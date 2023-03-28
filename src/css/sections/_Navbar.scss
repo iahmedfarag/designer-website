@@ -1,0 +1,119 @@
+nav {
+  padding: 20px 0;
+  position: relative;
+  z-index: 3;
+
+  .container {
+    @media (min-width: 1400px) {
+      max-width: 1320px;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+        font-size: 24px;
+      }
+      ul {
+        display: flex;
+        gap: 20px;
+        li {
+          a {
+            font-size: 16px;
+            font-weight: 400;
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+      .contactBtn {
+        font-size: 15px;
+        font-weight: 500;
+        padding: 12px 25px;
+        background-color: #d465ef;
+        color: white;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+  .media {
+    display: none;
+  }
+  transition: 0.3s;
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 66;
+    background-color: black;
+  }
+}
+@media (max-width: 992px) {
+  nav {
+    padding: 0;
+
+    .container {
+      .nav {
+        display: none;
+      }
+    }
+    .media {
+      display: block;
+      background-color: black;
+      padding: 10px 20px;
+      .logo {
+        font-size: 20px;
+        font-weight: 700;
+        display: block;
+        margin-bottom: 5px;
+      }
+      .menu {
+        background-color: grey;
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: right;
+        .content {
+          display: flex;
+          align-items: center;
+          background-color: rgba(0, 0, 0, 0.5);
+          padding: 3px 10px;
+          cursor: pointer;
+          position: relative;
+          z-index: 555;
+          p {
+            font-size: 18px;
+            margin-right: 5px;
+          }
+          i {
+            font-size: 18px;
+          }
+        }
+      }
+      ul {
+        // display: none
+        background-color: grey;
+        overflow: hidden;
+        max-height: 0;
+        transition: 0.5s;
+        li {
+          cursor: pointer;
+          color: aliceblue;
+          &:hover {
+            opacity: 0.7;
+          }
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
+}

@@ -1,0 +1,81 @@
+$blueLight: #615cfd;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Mulish", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+img {
+  max-width: 100%;
+}
+section {
+  scroll-margin-top: 81px;
+}
+// container
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 20px;
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+  // @media (min-width: 1400px) {
+  //   max-width: 1320px;
+  // }
+}
+
+section {
+  padding: 100px 0;
+}
+.sectionTitle {
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+.sectionTitleText {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  @media (max-width: 992px) {
+    font-size: 36px;
+  }
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
+}
+@import "./sections/Navbar";
+@import "./sections/Hero";
+@import "./sections/Services";
+@import "./sections/Portfolio";
+@import "./sections/About";
+@import "./sections/Numbers";
+@import "./sections/Testimonials";
+@import "./sections/Contact";
+@import "./sections/Footer";

@@ -1,0 +1,37 @@
+footer {
+  padding: 50px 0;
+  background-color: #001d38;
+  color: white;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .links {
+      display: flex;
+      gap: 30px;
+    }
+    .social {
+      display: flex;
+      gap: 30px;
+      i {
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    .container {
+      gap: 30px;
+
+      .links {
+        gap: 10px;
+      }
+      .social {
+        gap: 15px;
+      }
+    }
+  }
+}
